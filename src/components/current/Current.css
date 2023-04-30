@@ -5,30 +5,46 @@
     box-shadow: 10px -2px 20px 2px rgb(0 0 0 / 30%);
     margin: 20px auto 0 auto;
     padding: 5px;
-    color: #041E42;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.Hazeday, .Cloudsday , .Mistday {
+.Hazeday, .Cloudsday , .Mistday , .Drizzleday, .Smokeday , .Dustday, .Fogday, .Sandday, .Ashday, .Squallday, .Tornadoday {
     background-color: #B0C4DE;
+    color: #002147;
    
 }
-.Hazenight, .Cloudsnight, .Mistnight{
+.Hazenight, .Cloudsnight, .Mistnight , .Drizzlenight, .Smokenight , .Dustnight, .Fognight, .Sandnight, .Ashnight, .Squallnight, .Tornadonight{
     background-color: #5D8AA8;
+    color: #002147;
+}
+.Rainday, .Thunderstormday,.Snowday{
+    background-color: #1B5583;
+    color: #002147;
+}
+
+.Rainnight,.Thunderstormnight, .Snownight{
+    background-color: #003366;
+    color: #B0C4DE;
+
 }
 .Clearday{
     background-color: #00BFFF;
+    color: #002147;
 }
 
 .Clearnight{
     background-color: #002147;
+    color: #B0C4DE;
 }
 
 .inside{
-    background-color: rgba(255, 255, 255, .15);  
-    backdrop-filter: blur(5px);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     border-radius: inherit;
     padding: 5px;
     width: 95%;
@@ -83,7 +99,7 @@
 
 .parameterLabel{
     text-align: left;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 12px;
 }
 

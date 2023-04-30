@@ -3,6 +3,7 @@ import './App.css'
 import Search from './components/search/Search';
 import Current from './components/current/Current';
 import { WEATHER_API_KEY, currentWeatherAPI } from './api';
+import Forecast from './components/forecast/Forecast';
 
 
 function App() {
@@ -30,8 +31,7 @@ function App() {
       .catch((err) => console.log(err));
   }
 
-  console.log(currentWeather);
-  console.log(forecast);
+
 
   return (
     <>
@@ -40,6 +40,7 @@ function App() {
         {
           currentWeather && <Current data={currentWeather}/>
         }
+        {forecast && <Forecast data={forecast}/>}
       </div>
     </>
   );

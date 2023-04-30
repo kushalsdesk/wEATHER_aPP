@@ -4,6 +4,7 @@ import React from "react";
 const Current = ({ data }) => {
   return (
     <div className={data.weather[0].icon.includes("n")? `weather ${data.weather[0].main}night` : `weather ${data.weather[0].main}day`}>
+    
       <div className="inside">
         <div className="top">
           <div>
@@ -34,7 +35,7 @@ const Current = ({ data }) => {
 
             <div className="parameterRow">
               <span className="parameterLabel">Wind </span>
-              <span className="parameterValue">{data.wind.speed}km/h</span>
+              <span className="parameterValue">{data.wind.speed}m/s</span>
             </div>
 
             <div className="parameterRow">
@@ -44,11 +45,12 @@ const Current = ({ data }) => {
 
             <div className="parameterRow">
               <span className="parameterLabel">Pressure </span>
-              <span className="parameterValue">{data.main.pressure}mb</span>
+             <span className="parameterValue">{data.main.pressure}mb</span>
             </div>
           </div>
         </div>
       </div>
+      
     </div>
   );
 };
