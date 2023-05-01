@@ -4,6 +4,8 @@ import Search from './components/search/Search';
 import Current from './components/current/Current';
 import { WEATHER_API_KEY, currentWeatherAPI } from './api';
 import Forecast from './components/forecast/Forecast';
+import Footer from './components/footer/Footer';
+import Header from './components/header/Header';
 
 
 function App() {
@@ -35,6 +37,8 @@ function App() {
 
   return (
     <>
+      <Header/>
+      <hr/>
       <div className="container">
         <Search onSearchChange={handleOnSearchChange} />
         {
@@ -42,7 +46,10 @@ function App() {
         }
         {forecast && <Forecast data={forecast}/>}
       </div>
-    </>
+      {currentWeather && <Footer data={currentWeather}/>}
+     </>
+    
+    
   );
 }
 

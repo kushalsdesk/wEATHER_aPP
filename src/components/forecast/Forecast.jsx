@@ -26,7 +26,7 @@ const Forecast = ({ data }) => {
   return (
     <>
       <label htmlFor="" className="title">
-        Daily
+        Daily <p>(Tap for details)</p>
       </label>
 
       <Accordion allowZeroExpanded>
@@ -40,39 +40,48 @@ const Forecast = ({ data }) => {
                     alt="weather"
                     className="icon_small"
                   />
-                  <label htmlFor="" className="day">{forecastDays[index]}</label>
-                  <label htmlFor="" className="description">{item.weather[0].description}</label>
-                  <label htmlFor="" className="min_max">{Math.floor(item.main.temp_min)}&deg;C / {Math.ceil(item.main.temp_max)}&deg;C </label>
+                  <label htmlFor="" className="day">
+                    {forecastDays[index]}
+                  </label>
+                  <label htmlFor="" className="description">
+                    {item.weather[0].description}
+                  </label>
+                  <label htmlFor="" className="min_max">
+                    {Math.floor(item.main.temp_min)}&deg;C /{" "}
+                    {Math.ceil(item.main.temp_max)}&deg;C{" "}
+                  </label>
                 </div>
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
-                <div className="daily_details">
-                    <div className="daily_details_item">
-                        <label htmlFor="">Pressure</label>
-                        <label htmlFor="">{item.main.pressure} mb</label>
-                    </div>
-                    <div className="daily_details_item">
-                        <label htmlFor="">Humidity</label>
-                        <label htmlFor="">{item.main.humidity} %</label>
-                    </div>
-                    <div className="daily_details_item">
-                        <label htmlFor="">Clouds</label>
-                        <label htmlFor="">{item.clouds.all} %</label>
-                    </div>
-                    <div className="daily_details_item">
-                        <label htmlFor="">Wind Speed</label>
-                        <label htmlFor="">{item.wind.speed} m/s</label>
-                    </div>
-                    <div className="daily_details_item">
-                        <label htmlFor="">Sea Level</label>
-                        <label htmlFor="">{item.main.sea_level} m/s</label>
-                    </div>
-                    <div className="daily_details_item">
-                        <label htmlFor="">Feels Like</label>
-                        <label htmlFor="">{Math.round(item.main.feels_like)} &deg;C</label>
-                    </div>
+              <div className="daily_details">
+                <div className="daily_details_item">
+                  <label htmlFor="">Pressure</label>
+                  <label htmlFor="">{item.main.pressure} mb</label>
                 </div>
+                <div className="daily_details_item">
+                  <label htmlFor="">Humidity</label>
+                  <label htmlFor="">{item.main.humidity} %</label>
+                </div>
+                <div className="daily_details_item">
+                  <label htmlFor="">Clouds</label>
+                  <label htmlFor="">{item.clouds.all} %</label>
+                </div>
+                <div className="daily_details_item">
+                  <label htmlFor="">Wind Speed</label>
+                  <label htmlFor="">{item.wind.speed} m/s</label>
+                </div>
+                <div className="daily_details_item">
+                  <label htmlFor="">Sea Level</label>
+                  <label htmlFor="">{item.main.sea_level} m/s</label>
+                </div>
+                <div className="daily_details_item">
+                  <label htmlFor="">Feels Like</label>
+                  <label htmlFor="">
+                    {Math.round(item.main.feels_like)} &deg;C
+                  </label>
+                </div>
+              </div>
             </AccordionItemPanel>
           </AccordionItem>
         ))}
