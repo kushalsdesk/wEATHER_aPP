@@ -23,7 +23,6 @@ const Forecast = ({ data }) => {
   const forecastDays = WEEK_DAYS.slice(dayInWeek, WEEK_DAYS.length).concat(
     WEEK_DAYS.slice(0, dayInWeek)
   );
-    console.log(forecastDays);
   return (
     <>
       <label htmlFor="" className="title">
