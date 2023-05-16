@@ -17,7 +17,7 @@ const Current = ({ data }) => {
       <div className="top_container">
       <div className="sunPost"><img src="/icons/sunrise.png" alt="sunrise" width={40} height={40} /> {suntime.sunrise.toLowerCase()}</div>
         <h4>Time: {TimeMaker(data.timezone)}</h4>
-      <div className="sunPost"><img src="/public/icons/sunset.png" alt="sunset" width={40} height={40} /> {suntime.sunset.toLowerCase()}</div>
+      <div className="sunPost"><img src="/icons/sunset.png" alt="sunset" width={40} height={40} /> {suntime.sunset.toLowerCase()}</div>
       </div>
       <div className="inside">
         <div className="top">
