@@ -19,7 +19,7 @@ const getSunTime = (data) => {
         };
     }
 
-    return getLocalTime(timezones, sunriseUTC, sunsetUTC);
+    return getLocalTime(timezones[0], sunriseUTC, sunsetUTC);
 
     
 }
