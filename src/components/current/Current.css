@@ -1,130 +1,440 @@
-.weather{
-    height:300px;
-    border-radius: 6px;
-    box-shadow: 10px -2px 20px 2px rgb(0 0 0 / 30%);
-    margin: 20px auto 0 auto;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.weather {
+  height: 300px;
+  border-radius: 6px;
+  box-shadow: 10px -2px 20px 2px rgb(0 0 0 / 30%);
+  margin: 20px auto 0 auto;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+/*
+.Hazeday,
+.Cloudsday,
+.Mistday,
+.Drizzleday,
+.Smokeday,
+.Dustday,
+.Fogday,
+.Sandday,
+.Ashday,
+.Squallday,
+.Tornadoday {
+background-image: linear-gradient(to bottom, #b0c4de, #a2b9d7, #94aed0, #86a2c9, #7897c2);
+color: #002147;
 }
 
-.Hazeday, .Cloudsday , .Mistday , .Drizzleday, .Smokeday , .Dustday, .Fogday, .Sandday, .Ashday, .Squallday, .Tornadoday {
-    background-color: #B0C4DE;
-    color: #002147;
-   
-}
-.Hazenight, .Cloudsnight, .Mistnight , .Drizzlenight, .Smokenight , .Dustnight, .Fognight, .Sandnight, .Ashnight, .Squallnight, .Tornadonight{
-    background-color: #5D8AA8;
-    color: #002147;
-}
-.Rainday, .Thunderstormday,.Snowday{
-    background-color: #1B5583;
-    color: #002147;
-}
-
-.Rainnight,.Thunderstormnight, .Snownight{
-    background-color: #003366;
-    color: #B0C4DE;
-
-}
-.Clearday{
-    background-color: #00BFFF;
-    color: #002147;
+.Hazenight,
+.Cloudsnight,
+.Mistnight,
+.Drizzlenight,
+.Smokenight,
+.Dustnight,
+.Fognight,
+.Sandnight,
+.Ashnight,
+.Squallnight,
+.Tornadonight {
+background-image: linear-gradient(to bottom, #5d8aa8, #527d9d, #477092, #3c6387, #31467c);
+color: #b0c4de;
 }
 
-.Clearnight{
-    background-color: #002147;
-    color: #B0C4DE;
+.Rainday,
+.Thunderstormday,
+.Snowday {
+background-image: linear-gradient(to bottom, #1b5583, #18527c, #145074, #104d6d, #0c4a66);
+color: #002147;
 }
 
-.inside{
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border:1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    border-radius: inherit;
-    padding: 5px 15px;
-    width: 95%;
-    height: 75%;
-}
-.top_container{
-    display: flex;
-    flex-direction: space-evenly;
-    align-items: center;
-    justify-content: center;
-}
-h4{
-    margin: 0 25px;
-}
-.sunPost{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.top, .bottom{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 25px;
+.Rainnight,
+.Thunderstormnight,
+.Snownight {
+background-image: linear-gradient(to bottom, #003366, #002f5f, #002a58, #002551, #001f4a);
+color: #b0c4de;
 }
 
-.cityName{
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 1;
-    margin: 0;
-    letter-spacing: 1px;
+.Clearday {
+background-image: linear-gradient(to bottom, #00bfff, #00a3d1, #0087a5, #006a78, #004c4b);
+color: #002147;
 }
 
-.weatherStat{
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1;
-    margin: 0;
+.Clearnight {
+background-image: linear-gradient(to bottom, #002147, #001b3a, #00152e, #000e21, #000714);
+color: #b0c4de;
+}
+*/
+.Hazeday {
+  background-image: linear-gradient(
+    to bottom,
+    #b0c4de,
+    #a2b9d7,
+    #94aed0,
+    #86a2c9,
+    #7897c2
+  );
+  color: #002147;
 }
 
-.weatherIcon{
-    width: 60px;
+.Cloudsday {
+  background-image: linear-gradient(
+    to bottom,
+    #a2b9d7,
+    #96afc9,
+    #8aa6bb,
+    #7e9cab,
+    #729499
+  );
+  color: #002147;
 }
 
-.temp{
-    font-weight: 600;
-    font-size: 70px;
-    width: auto;
-    letter-spacing: -5px;
-    margin: 10px 0;
+.Mistday {
+  background-image: linear-gradient(
+    to bottom,
+    #94aed0,
+    #87a5c3,
+    #7a9db5,
+    #6e94a7,
+    #628b99
+  );
+  color: #002147;
 }
 
-.details{
-    width: 35%;
-    padding-left: 20px;
-
+.Drizzleday {
+  background-image: linear-gradient(
+    to bottom,
+    #86a2c9,
+    #7a99bc,
+    #6d90af,
+    #6187a1,
+    #557e94
+  );
+  color: #002147;
 }
+
+.Smokeday {
+  background-image: linear-gradient(
+    to bottom,
+    #7897c2,
+    #6d8eb5,
+    #6275a8,
+    #576c9a,
+    #4c638d
+  );
+  color: #002147;
+}
+
+.Dustday {
+  background-image: linear-gradient(
+    to bottom,
+    #6b8cb9,
+    #5f83ac,
+    #537a9e,
+    #47618f,
+    #3b5881
+  );
+  color: #002147;
+}
+
+.Fogday {
+  background-image: linear-gradient(
+    to bottom,
+    #5e80b2,
+    #5277a5,
+    #466e97,
+    #3a6588,
+    #2f5c7a
+  );
+  color: #002147;
+}
+
+.Sandday {
+  background-image: linear-gradient(
+    to bottom,
+    #5175a9,
+    #456c9c,
+    #3a639e,
+    #2e598f,
+    #245080
+  );
+  color: #002147;
+}
+
+.Ashday {
+  background-image: linear-gradient(
+    to bottom,
+    #446aa0,
+    #396195,
+    #2e587a,
+    #234f6b,
+    #19455d
+  );
+  color: #002147;
+}
+
+.Squallday {
+  background-image: linear-gradient(
+    to bottom,
+    #375e97,
+    #2c558a,
+    #214c7d,
+    #17436f,
+    #0c3961
+  );
+  color: #002147;
+}
+
+.Tornadoday {
+  background-image: linear-gradient(
+    to bottom,
+    #2a548e,
+    #1f4b81,
+    #144274,
+    #093966,
+    #002f59
+  );
+  color: #002147;
+}
+.Clearday {
+  background-image: linear-gradient(
+    to bottom,
+    #00bfff,
+    #00a6e8,
+    #0091c5,
+    #007cae,
+    #006797
+  );
+  color: #002147;
+}
+
+.Clearnight {
+  background-image: linear-gradient(
+    to bottom,
+    #002147,
+    #001d39,
+    #00172d,
+    #001221,
+    #000c15
+  );
+  color: #b0c4de;
+}
+.Hazenight {
+  background-image: linear-gradient(
+    to bottom,
+    #5d8aa8,
+    #527d9d,
+    #477092,
+    #3c6387,
+    #31467c
+  );
+  color: #b0c4de;
+}
+
+.Cloudsnight {
+  background-image: linear-gradient(
+    to bottom,
+    #527d9d,
+    #496f8f,
+    #405282,
+    #374575,
+    #2e3868
+  );
+  color: #b0c4de;
+}
+
+.Mistnight {
+  background-image: linear-gradient(
+    to bottom,
+    #477092,
+    #3e6484,
+    #355777,
+    #2c4a6a,
+    #234d5d
+  );
+  color: #b0c4de;
+}
+
+.Drizzlenight {
+  background-image: linear-gradient(
+    to bottom,
+    #3c6387,
+    #355a7a,
+    #2e506d,
+    #26475f,
+    #1f3e52
+  );
+  color: #b0c4de;
+}
+
+.Smokenight {
+  background-image: linear-gradient(
+    to bottom,
+    #31467c,
+    #2a3e6f,
+    #243562,
+    #1d2c55,
+    #162448
+  );
+  color: #b0c4de;
+}
+
+.Dustnight {
+  background-image: linear-gradient(
+    to bottom,
+    #275a72,
+    #1e4e66,
+    #17425a,
+    #10374e,
+    #092b42
+  );
+  color: #b0c4de;
+}
+
+.Fognight {
+  background-image: linear-gradient(
+    to bottom,
+    #1d4f66,
+    #16445a,
+    #0f394e,
+    #082d42,
+    #021137
+  );
+  color: #b0c4de;
+}
+
+.Sandnight {
+  background-image: linear-gradient(
+    to bottom,
+    #145462,
+    #0e4a56,
+    #083e4a,
+    #02333e,
+    #002832
+  );
+  color: #b0c4de;
+}
+
+.Ashnight {
+  background-image: linear-gradient(
+    to bottom,
+    #0c3b58,
+    #07304c,
+    #022540,
+    #001a34,
+    #000e28
+  );
+  color: #b0c4de;
+}
+
+.Squallnight {
+  background-image: linear-gradient(
+    to bottom,
+    #032b4e,
+    #021f42,
+    #011536,
+    #000929,
+    #00011d
+  );
+  color: #b0c4de;
+}
+
+.Tornadonight {
+  background-image: linear-gradient(
+    to bottom,
+    #001f44,
+    #001538,
+    #000c2c,
+    #000620,
+    #000014
+  );
+  color: #b0c4de;
+}
+
+.inside {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border-radius: inherit;
+  padding: 5px 15px;
+  width: 95%;
+  height: 75%;
+}
+.top_container {
+  display: flex;
+  flex-direction: space-evenly;
+  align-items: center;
+  justify-content: center;
+}
+h4 {
+  margin: 0 25px;
+}
+.sunPost {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.top,
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.cityName {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.weatherStat {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  margin: 0;
+}
+
+.weatherIcon {
+  width: 60px;
+}
+
+.temp {
+  font-weight: 600;
+  font-size: 70px;
+  width: auto;
+  letter-spacing: -5px;
+  margin: 10px 0;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.detail {
+  text-align: center;
+  margin: 0 10px;
+  font-size: 20px;
+}
+
 @media (max-width: 600px) {
-    .details{
-        width: 50%;
-    }
-}
-
-
-
-.parameterRow{
-    display: flex;
-    justify-content: space-between;
-}
-
-
-.parameterLabel{
-    text-align: left;
-    font-weight: 700;
-    font-size: 12px;
-}
-
-.parameterValue{
-    text-align: right;
-    font-weight: 600;
-    font-size: 12px;
+  .temp {
+    font-size: 50px;
+  }
+  .details {
+    width: 70%;
+  }
+  .detail {
+    margin: 0 4px;
+    font-size: 15px;
+  }
 }

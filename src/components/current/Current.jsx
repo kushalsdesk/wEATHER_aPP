@@ -40,31 +40,23 @@ const Current = ({ data }) => {
 
         <div className="bottom">
           <p className="temp">{Math.round(data.main.temp)}&deg;C</p>
-          <div className="details">
-            <div className="parameterRow">
-              <span className="parameterLabel">Details</span>
-            </div>
 
-            <div className="parameterRow">
-              <span className="parameterLabel">Feels Like </span>
-              <span className="parameterValue">
-                {Math.round(data.main.feels_like)}&deg;C
-              </span>
+          <div class="details">
+            <div class="detail">
+              <p class="label">Feels Like </p>
+              <p class="value">{Math.round(data.main.feels_like)}&deg;C</p>
             </div>
-
-            <div className="parameterRow">
-              <span className="parameterLabel">Wind </span>
-              <span className="parameterValue">{data.wind.speed}m/s</span>
+            <div class="detail">
+              <p class="label">Humidity</p>
+              <p class="value">{data.main.humidity}%</p>
             </div>
-
-            <div className="parameterRow">
-              <span className="parameterLabel">Humidity </span>
-              <span className="parameterValue">{data.main.humidity}%</span>
+            <div class="detail">
+              <p class="label">Wind Speed</p>
+              <p class="value">{data.wind.speed}m/s</p>
             </div>
-
-            <div className="parameterRow">
-              <span className="parameterLabel">Pressure </span>
-              <span className="parameterValue">{data.main.pressure}mb</span>
+            <div class="detail">
+              <p class="label">Pressure</p>
+              <p class="value">{data.main.pressure}mb</p>
             </div>
           </div>
         </div>

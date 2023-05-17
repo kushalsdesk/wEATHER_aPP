@@ -1,44 +1,42 @@
-import React, { useState } from 'react';
-import './App.css'
-import Search from './components/search/Search';
-import Current from './components/current/Current';
-import { WEATHER_API_KEY, currentWeatherAPI } from './api';
-import Forecast from './components/forecast/Forecast';
-import Footer from './components/footer/Footer';
-import Header from './components/header/Header';
-
+import React, { useState } from "react";
+import "./App.css";
+import Search from "./components/search/Search";
+import Current from "./components/current/Current";
+import { WEATHER_API_KEY, currentWeatherAPI } from "./api";
+import Forecast from "./components/forecast/Forecast";
+import Footer from "./components/footer/Footer";
+import Header from "./components/header/Header";
 
 function App() {
-
-
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecast, setForecast] = useState(null);
 
   const handleOnSearchChange = (searchData) => {
     const [lat, lon] = searchData.value.split(" ");
 
-    
-    const currentWeatherFetch= fetch(`${currentWeatherAPI}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`);
+    const currentWeatherFetch = fetch(
+      `${currentWeatherAPI}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
+    );
 
-    const forecastFetch= fetch(`${currentWeatherAPI}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`);
+    const forecastFetch = fetch(
+      `${currentWeatherAPI}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
+    );
 
-    Promise.all([currentWeatherFetch,forecastFetch])
-      .then(async(response) => {
+    Promise.all([currentWeatherFetch, forecastFetch])
+      .then(async (response) => {
         const weatherRes = await response[0].json();
         const forecastRes = await response[1].json();
 
-        setCurrentWeather({city:searchData.label, ...weatherRes});
-        setForecast({city: searchData.label, ...forecastRes});
+        setCurrentWeather({ city: searchData.label, ...weatherRes });
+        setForecast({ city: searchData.label, ...forecastRes });
       })
       .catch((err) => console.log(err));
-  }
-
-
+  };
 
   return (
-    <>
-      <Header/>
-      <hr/>
+    <div>
+      <Header />
+      <hr />
       <div className="container">
         <Search onSearchChange={handleOnSearchChange} />
         {
@@ -46,10 +44,8 @@ function App() {
         }
         {forecast && <Forecast data={forecast}/>}
       </div>
-      {currentWeather && <Footer data={currentWeather}/>}
-     </>
-    
-    
+      {currentWeather && <Footer data={currentWeather} />}
+    </div>
   );
 }
 
