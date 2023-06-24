@@ -1,4 +1,4 @@
-<h1><a href="https://km-weather.netlify.app/" target="_blank">Weather App</a></h1>
+<h1 align="center"><a href="https://km-weather.netlify.app/" target="_blank">Weather App</a></h1>
 
 <p>Click the link to see the actual site</p>
 
