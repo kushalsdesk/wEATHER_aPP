@@ -179,7 +179,7 @@ export default {
 
 <div align="left">
 
-<h3><a href="/src/api.jsx">api.jsx</a></h3>
+<h4><a href="/src/api.jsx">api.jsx</a></h4>
 
 <pre>
 <code>
@@ -491,5 +491,120 @@ export default App;
 <p>
   Finally, the <code>Footer</code> component is exported as the default export of the module.
 </p>
+<div align="left">
+  <h4><a href="/src/components/forecast/Forecast.jsx">Forecast.jsx</a></h4>
+  <h2>Forecast Component Explanation</h2>
 
+<p>
+  The <code>Forecast</code> component is a functional component that displays the daily weather forecast.
+</p>
+
+<p>
+  The component imports CSS styles from the <code>Forecast.css</code> file and various components from the <code>react-accessible-accordion</code> library.
+</p>
+
+<p>
+  The <code>Forecast</code> component takes a single parameter, <code>data</code>, which contains the weather forecast data.
+</p>
+
+<p>
+  Inside the component, there is a label with the class name <code>title</code>. It displays the text "Daily" and "Tap for details".
+</p>
+
+<p>
+  The component uses the <code>Accordion</code> component from the <code>react-accessible-accordion</code> library to create an accordion-style UI for the daily forecast items.
+</p>
+
+<p>
+  The forecast data is mapped over to create individual <code>AccordionItem</code> components for each forecast item.
+</p>
+
+<p>
+  Each <code>AccordionItem</code> has a <code>AccordionItemHeading</code> with a button, and a <code>AccordionItemPanel</code> that contains the details of the forecast item.
+</p>
+
+<p>
+  Inside the <code>AccordionItemButton</code>, there is a <code>div</code> element with the class name <code>daily_item</code>. It displays the weather icon, day of the week, weather description, and temperature range for the day.
+</p>
+
+<p>
+  When the button is clicked, the <code>AccordionItemPanel</code> expands to reveal more details about the forecast item.
+</p>
+
+<p>
+  The <code>AccordionItemPanel</code> contains a <code>div</code> element with the class name <code>daily_details</code>. It displays additional details such as pressure, humidity, clouds, wind speed, sea level, and feels like temperature.
+</p>
+
+<p>
+  The forecast data is limited to the first 7 items using the <code>splice</code> method to show the forecast for the upcoming days.
+</p>
+
+<p>
+  Finally, the <code>Forecast</code> component is exported as the default export of the module.
+</p>
+
+<div align="left">
+  <h4><a href="/src/components/header/Header.jsx">Header.jsx</a></h4>
+  <h2>Header Component Explanation</h2>
+
+<p>
+  The <code>Header</code> component is a functional component that represents the header of the weather application.
+</p>
+
+<p>
+  The component imports CSS styles from the <code>Header.css</code> file.
+</p>
+
+<p>
+  Inside the component, there is a <code>div</code> element with the class name <code>header</code>. It contains an image and a text.
+</p>
+
+<p>
+  The image source is dynamically set using template literals and the <code>icons/weather.png</code> path.
+</p>
+
+<p>
+  Below the image, there is a <code>p</code> element that displays the text "Get Your Weather Update".
+</p>
+
+<p>
+  The <code>Header</code> component is exported as the default export of the module.
+</p>
+
+<div align="left">
+  <h4><a href="/src/components/search/Search.jsx">Search.jsx</a></h4>
+  <h2>Search Component Explanation</h2>
+
+
+<p>
+  The <code>Search</code> component is a functional component responsible for the search functionality in the weather application.
+</p>
+
+<p>
+  The component imports the necessary dependencies, including <code>useState</code> from React and <code>AsyncPaginate</code> from the <code>react-select-async-paginate</code> library.
+</p>
+
+<p>
+  Inside the component, there is a <code>useState</code> hook used to manage the state of the search input.
+</p>
+
+<p>
+  The component defines a function named <code>handleOnChange</code> which is called when the search input value changes. It updates the search state and invokes the <code>onSearchChange</code> function passed as a prop, passing the search data as an argument.
+</p>
+
+<p>
+  The component also defines an asynchronous <code>loadOptions</code> function that is used by the <code>AsyncPaginate</code> component to load options based on the user's input. Inside the function, it makes an API call to the specified URL with the provided query parameters. The response is then transformed into the expected format and returned as options for the <code>AsyncPaginate</code> component.
+</p>
+
+<p>
+  The <code>Search</code> component returns the <code>AsyncPaginate</code> component, which renders a search input field with asynchronous option loading based on user input.
+</p>
+
+<p>
+  The <code>AsyncPaginate</code> component receives several props such as <code>placeholder</code>, <code>debounceTimeout</code>, <code>value</code>, <code>onChange</code>, and <code>loadOptions</code> to handle the search functionality.
+</p>
+
+<p>
+  The <code>Search</code> component is exported as the default export of the module.
+</p>
 
