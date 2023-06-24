@@ -1,6 +1,6 @@
 <h1 align="center"><a href="https://km-weather.netlify.app/" target="_blank">Weather App</a></h1>
 
-<p>Click the link to see the actual site</p>
+<p align="center">Click the link to see the actual site</p>
 
 
 <div align="center">
