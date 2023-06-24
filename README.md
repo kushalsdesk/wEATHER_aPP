@@ -24,7 +24,7 @@
     <li>Node.js: Make sure you have Node.js installed on your system. You can download it from the official Node.js website: <a href="https://nodejs.org">https://nodejs.org</a></li>
 </ol>
 
-<h2 align="center">Features</h2>
+<h2>Features</h2>
 
 <p>The Weather App offers the following key features:</p>
 
@@ -36,7 +36,7 @@
     <li>Responsive Design: The app is built with responsiveness in mind, ensuring a seamless experience across various devices.</li>
 </ol>
 
-<h2 align="center">Installation</h2>
+<h2>Installation</h2>
 
 <p>To set up and run the Weather App locally, follow these steps:</p>
 
@@ -49,7 +49,7 @@
 <h4>3. Install the dependencies:</h4>
 <pre><code>npm install</code></pre>
 
-<h2 align="center">Tech Stacks</h2>
+<h2 >Tech Stacks</h2>
 <p><strong>Dependencies:</strong></p>
 <ul>
     <li>moment-timezone: Version 0.5.43</li>
@@ -72,7 +72,7 @@
     <li>vite: Version 4.3.0</li>
 </ul>
 
-<h2 align="center">Available Scripts</h2>
+<h2>Available Scripts</h2>
 
 <p>In the project directory, you can run the following scripts:</p>
 
