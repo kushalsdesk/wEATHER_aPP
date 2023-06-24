@@ -222,4 +222,63 @@ export const WEATHER_API_KEY = "b78eb28673235e92fd98f2b4ee473dcd";
   </ul>
 </div>
 
+<div align="left">
+
+<h4><a href="src/utils/TimeMaker.js">TimeMaker.js</a></h4>
+    
+  <pre><code class="language-javascript">
+const getTime = (timezone_offset) => {
+  // Define the UTC timezone offset in seconds
+  let utcOffsetSeconds = timezone_offset; // Example: UTC+01:00
+
+  // Create a new Date object with the current UTC time
+  let utcDate = new Date();
+
+  // Get the current local time in milliseconds
+  let localTimeMilliseconds =
+    utcDate.getTime() + utcDate.getTimezoneOffset() * 60 * 1000;
+
+  // Calculate the local timezone offset in milliseconds
+  let localOffsetMilliseconds = utcOffsetSeconds * 1000;
+
+  // Calculate the target local time in milliseconds
+  let targetTimeMilliseconds = localTimeMilliseconds + localOffsetMilliseconds;
+
+  // Create a new Date object with the target local time
+  let targetDate = new Date(targetTimeMilliseconds);
+
+  // Get the local time format with AM/PM indication
+  let localTime = targetDate.toLocaleString(undefined, {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  });
+
+  return localTime;
+};
+
+export default getTime;
+  </code></pre>
+</div>
+
+<ol>
+  <li><strong>Line 1:</strong> The <code>getTime</code> function is declared, which takes the <code>timezone_offset</code> as a parameter.</li>
+  <li><strong>Line 3-6:</strong> The <code>utcOffsetSeconds</code> variable is defined to store the UTC timezone offset.</li>
+  <li><strong>Line 9:</strong> A new Date object, <code>utcDate</code>, is created to represent the current UTC time.</li>
+  <li><strong>Line 12:</strong> The current local time in milliseconds is calculated by adding the UTC time and the local timezone offset in minutes.</li>
+  <li><strong>Line 15:</strong> The <code>localOffsetMilliseconds</code> variable stores the local timezone offset in milliseconds.</li>
+  <li><strong>Line 18:</strong> The target local time in milliseconds is calculated by adding the current local time and the local timezone offset.</li>
+  <li><strong>Line 21:</strong> A new Date object, <code>targetDate</code>, is created with the target local time.</li>
+  <li><strong>Line 24-32:</strong> The <code>toLocaleString</code> method is used to format the local time with the specified options for year, month, day, hour, minute, and hour12 (to display AM/PM indication).</li>
+  <li><strong>Line 35:</strong> The formatted local time is returned as the result of the function.</li>
+  <li><strong>Line 38:</strong> The <code>getTime</code> function is exported as the default export of the module.</li>
+</ol>
+
+<p>
+  This code defines a JavaScript function that converts a given UTC time to the corresponding local time based on the provided timezone offset. The local time is formatted with the specified options and returned as a string.
+</p>
+
 
