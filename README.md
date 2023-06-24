@@ -1,4 +1,7 @@
-<h1 align="center">Weather App</h1>
+<h1 align="center"><a href="https://km-weather.netlify.app/">Weather App</a></h1>
+<p>Click the App to see the actual site</p>
+
+
 <div align="center">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" alt="React Logo" width="70" height="60">
 
