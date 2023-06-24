@@ -405,5 +405,53 @@ export default App;
 <p>
   This code defines a React component that represents the main application. It uses state variables to manage the current weather and forecast data. The <code>handleOnSearchChange</code> function handles the search change event and fetches the required data from the API. The rendered UI includes various components based on the state and fetched data.
 </p>
+<div align="left">
+  <h4><a href="/src/components/current/Current.jsx">Current.jsx</a></h4>
+  <p>
+    The code represents a React component named <code>Current</code> that displays the current weather information.
+  </p>
+  <p>
+    The component imports CSS styles from the <code>Current.css</code> file and necessary utility functions.
+  </p>
+  <p>
+    The <code>Current</code> component is a functional component that takes a single parameter, <code>data</code>, which contains the weather data to be displayed.
+  </p>
+  <p>
+    The <code>getSunTime</code> function is invoked with the <code>data</code> parameter to calculate sunrise and sunset times based on the country code and UTC values.
+  </p>
+  <p>
+    The component renders a &lt;div&gt; element with a dynamic class name based on the weather condition (day or night).
+  </p>
+  <p>
+    Inside the main &lt;div&gt;, there is a container for the sunrise time, current time, and sunset time.
+  </p>
+  <p>
+    The sunrise and sunset times are displayed using the calculated values from <code>getSunTime</code>.
+  </p>
+  <p>
+    Next, there is a nested &lt;div&gt; with the class name <code>inside</code>, which contains the weather details.
+  </p>
+  <p>
+    Inside the <code>inside</code> container, there is a top section and a bottom section.
+  </p>
+  <p>
+    The top section displays the city name, weather description, and an icon representing the weather condition.
+  </p>
+  <p>
+    The weather icon is determined based on the <code>data.weather[0].icon</code> value.
+  </p>
+  <p>
+    The bottom section displays additional weather details, such as temperature, feels like temperature, humidity, wind speed, and pressure.
+  </p>
+  <p>
+    Each detail is wrapped in a &lt;div&gt; with the class name <code>detail</code>, containing a label and value.
+  </p>
+  <p>
+    The values are extracted from the <code>data</code> object.
+  </p>
+  <p>
+    Finally, the <code>Current</code> component is exported as the default export of the module.
+  </p>
+</div>
 
 
