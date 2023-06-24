@@ -224,7 +224,7 @@ export const WEATHER_API_KEY = "b78eb28673235e92fd98f2b4ee473dcd";
 
 <div align="left">
 
-<h4><a href="src/utils/TimeMaker.js">TimeMaker.js</a></h4>
+<h4><a href="/src/utils/TimeMaker.js">TimeMaker.js</a></h4>
     
   <pre><code class="language-javascript">
 const getTime = (timezone_offset) => {
@@ -279,6 +279,52 @@ export default getTime;
 
 <p>
   This code defines a JavaScript function that converts a given UTC time to the corresponding local time based on the provided timezone offset. The local time is formatted with the specified options and returned as a string.
+</p>
+<div align="left">
+<h4><a href="/src/utils/sunPoints.js">sunPoints.js</a></h4>
+  <pre><code class="language-javascript">
+import moment from "moment-timezone"
+
+const getSunTime = (data) => {
+  const countryCode = data.sys.country;
+  const sunriseUTC = data.sys.sunrise;
+  const sunsetUTC = data.sys.sunset;
+
+  const timezones = moment.tz.zonesForCountry(countryCode);
+
+  function getLocalTime(timezone, sunriseUTC, sunsetUTC) {
+    // Convert UTC times to local timezone
+    let sunriseLocal = new Date(sunriseUTC * 1000).toLocaleTimeString('en-US', { timeZone: timezone, hour: '2-digit', minute: '2-digit' });
+    let sunsetLocal = new Date(sunsetUTC * 1000).toLocaleTimeString('en-US', { timeZone: timezone, hour: '2-digit', minute: '2-digit' });
+
+    return {
+      sunrise: sunriseLocal,
+      sunset: sunsetLocal
+    };
+  }
+
+  return getLocalTime(timezones[0], sunriseUTC, sunsetUTC);
+}
+
+export default getSunTime;
+  </code></pre>
+</div>
+
+<ol>
+  <li><strong>Line 1:</strong> The <code>moment</code> library is imported to work with time and timezones.</li>
+  <li><strong>Line 3-10:</strong> The <code>getSunTime</code> function is declared, which takes the <code>data</code> object as a parameter.</li>
+  <li><strong>Line 4-6:</strong> The necessary data such as the country code, sunrise UTC time, and sunset UTC time are extracted from the <code>data</code> object.</li>
+  <li><strong>Line 8:</strong> The <code>zonesForCountry</code> method from <code>moment.tz</code> is used to get the available timezones for the given country code.</li>
+  <li><strong>Line 10-19:</strong> The <code>getLocalTime</code> function is defined, which takes the timezone, sunrise UTC time, and sunset UTC time as parameters.</li>
+  <li><strong>Line 13-14:</strong> The UTC times are converted to the local timezone using the <code>toLocaleTimeString</code> method with the specified options for timezone, hour, and minute formatting.</li>
+  <li><strong>Line 16-18:</strong> An object containing the local sunrise and sunset times is returned as the result of the function.</li>
+  <li><strong>Line 21:</strong> The <code>getLocalTime</code> function is called with the first timezone from the <code>timezones</code> array, and the sunrise and sunset UTC times.</li>
+  <li><strong>Line 23:</strong> The local sunrise and sunset times are returned as the result of the <code>getSunTime</code> function.</li>
+  <li><strong>Line 26:</strong> The <code>getSunTime</code> function is exported as the default export of the module.</li>
+</ol>
+
+<p>
+  This code defines a JavaScript function that retrieves the local sunrise and sunset times based on the provided data object. It uses the <code>moment-timezone</code> library to work with timezones and <code>toLocaleTimeString</code> method to convert UTC times to the local timezone.
 </p>
 
 
