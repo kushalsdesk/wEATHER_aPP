@@ -326,5 +326,84 @@ export default getSunTime;
 <p>
   This code defines a JavaScript function that retrieves the local sunrise and sunset times based on the provided data object. It uses the <code>moment-timezone</code> library to work with timezones and <code>toLocaleTimeString</code> method to convert UTC times to the local timezone.
 </p>
+<div align="left">
+ <h4><a href="/src/App.jsx">App.jsx</a></h4>
+
+  <pre><code class="language-javascript">
+import React, { useState } from "react";
+import "./App.css";
+import Search from "./components/search/Search";
+import Current from "./components/current/Current";
+import { WEATHER_API_KEY, currentWeatherAPI } from "./api";
+import Forecast from "./components/forecast/Forecast";
+import Footer from "./components/footer/Footer";
+import Header from "./components/header/Header";
+
+function App() {
+  const [currentWeather, setCurrentWeather] = useState(null);
+  const [forecast, setForecast] = useState(null);
+
+  const handleOnSearchChange = (searchData) => {
+    const [lat, lon] = searchData.value.split(" ");
+
+    const currentWeatherFetch = fetch(
+      `${currentWeatherAPI}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
+    );
+
+    const forecastFetch = fetch(
+      `${currentWeatherAPI}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
+    );
+
+    Promise.all([currentWeatherFetch, forecastFetch])
+      .then(async (response) => {
+        const weatherRes = await response[0].json();
+        const forecastRes = await response[1].json();
+
+        setCurrentWeather({ city: searchData.label, ...weatherRes });
+        setForecast({ city: searchData.label, ...forecastRes });
+      })
+      .catch((err) => console.log(err));
+  };
+
+  return (
+    &lt;div&gt;
+      &lt;Header /&gt;
+      &lt;hr /&gt;
+      &lt;div className="container"&gt;
+        &lt;Search onSearchChange={handleOnSearchChange} /&gt;
+        {
+          currentWeather &amp;&amp; &lt;Current data={currentWeather}/&gt;
+        }
+        {forecast &amp;&amp; &lt;Forecast data={forecast}/&gt;}
+      &lt;/div&gt;
+      {currentWeather &amp;&amp; &lt;Footer data={currentWeather} /&gt;}
+    &lt;/div&gt;
+  );
+}
+
+export default App;
+  </code></pre>
+</div>
+
+<ol>
+  <li><strong>Line 1:</strong> The <code>React</code> library is imported.</li>
+  <li><strong>Line 2:</strong> The <code>useState</code> hook is imported from React.</li>
+  <li><strong>Line 3-7:</strong> The necessary components and APIs are imported.</li>
+  <li><strong>Line 10-11:</strong> Two state variables, <code>currentWeather</code> and <code>forecast</code>, are declared using the <code>useState</code> hook.</li>
+  <li><strong>Line 13-27:</strong> The <code>handleOnSearchChange</code> function is defined. It handles the search change event and performs API requests to fetch the current weather and forecast data based on the search coordinates.</li>
+  <li><strong>Line 30-62:</strong> The <code>App</code> component is defined. It renders the application UI based on the state variables and data fetched from the API.</li>
+  <li><strong>Line 35-45:</strong> The <code>handleOnSearchChange</code> function is passed to the <code>Search</code> component as a prop.</li>
+  <li><strong>Line 37-39:</strong> The <code>Current</code> component is conditionally rendered if <code>currentWeather</code> exists.</li>
+  <li><strong>Line 40-42:</strong> The <code>Forecast</code> component is conditionally rendered if <code>forecast</code> exists.</li>
+  <li><strong>Line 46-49:</strong> The <code>Header</code> component is rendered.</li>
+  <li><strong>Line 50:</strong> A horizontal rule is rendered.</li>
+  <li><strong>Line 51-56:</strong> The main content container is rendered, containing the search component, current weather component, and forecast component.</li>
+  <li><strong>Line 58:</strong> The <code>Footer</code> component is conditionally rendered if <code>currentWeather</code> exists.</li>
+  <li><strong>Line 61:</strong> The <code>App</code> component is exported as the default export of the module.</li>
+</ol>
+
+<p>
+  This code defines a React component that represents the main application. It uses state variables to manage the current weather and forecast data. The <code>handleOnSearchChange</code> function handles the search change event and fetches the required data from the API. The rendered UI includes various components based on the state and fetched data.
+</p>
 
 
