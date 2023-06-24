@@ -46,4 +46,4 @@ In the project directory, you can run the following scripts:
 - `npm run lint`: Lints the source code using ESLint.
 - `npm run preview`: Previews the production build locally.
 
-#### For More Info Visit [package.json] (package.json)
+#### For More Info Visit [/package.json](/package.json)
