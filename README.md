@@ -1,6 +1,5 @@
 <h1 align="center"><a href="https://km-weather.netlify.app/" target="_blank">Weather App</a></h1>
-
-<p align="center">Click the link to see the actual site</p>
+<p>Click the link to see the actual site</p>
 
 
 <div align="center">
@@ -15,7 +14,7 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png" alt="JavaScript Logo" width="60" height="60">
 
 
-<p align="left">This GitHub repository contains the source code for a weather application built with React. The app allows users to access weather information for various locations and provides a user-friendly interface for easy navigation.</p>
+<p align="left" style="margin-top: 20px">This GitHub repository contains the source code for a weather application built with React. The app allows users to access weather information for various locations and provides a user-friendly interface for easy navigation.</p>
 <div align="left">
 <h3>Prerequisites</h3>
 
