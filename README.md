@@ -406,7 +406,9 @@ export default App;
   This code defines a React component that represents the main application. It uses state variables to manage the current weather and forecast data. The <code>handleOnSearchChange</code> function handles the search change event and fetches the required data from the API. The rendered UI includes various components based on the state and fetched data.
 </p>
 <div align="left">
+	<h3>Current Component Explanation</h3>
   <h4><a href="/src/components/current/Current.jsx">Current.jsx</a></h4>
+
   <p>
     The code represents a React component named <code>Current</code> that displays the current weather information.
   </p>
@@ -453,5 +455,41 @@ export default App;
     Finally, the <code>Current</code> component is exported as the default export of the module.
   </p>
 </div>
+<div align="left">
+	<h3>Footer Component Explanation</h3>
+  <h4><a href="/src/components/current/Footer.jsx">Footer.jsx</a></h4>
+  
+
+<p>
+  The <code>Footer</code> component is a functional component that displays the footer section of the application.
+</p>
+
+<p>
+  The component imports CSS styles from the <code>Footer.css</code> file.
+</p>
+
+<p>
+  The <code>Footer</code> component takes a single parameter, <code>data</code>, which contains the weather data.
+</p>
+
+<p>
+  Inside the component, there is a <code>&lt;div&gt;</code> element with the class name <code>footer</code>. It displays the footer text.
+</p>
+
+<p>
+  The footer text includes a copyright symbol (<code>&amp;#169;</code>) and a link to the GitHub profile of <code>kushal_mydesk</code>.
+</p>
+
+<p>
+  The link's <code>className</code> is dynamically set based on the weather condition. If the weather condition includes "n" in the icon, it adds the class <code>${data.weather[0].main}night</code>, otherwise, it adds the class <code>${data.weather[0].main}day</code>.
+</p>
+
+<p>
+  The link opens in a new tab with the <code>target</code> attribute set to <code>_blank</code>.
+</p>
+
+<p>
+  Finally, the <code>Footer</code> component is exported as the default export of the module.
+</p>
 
 
