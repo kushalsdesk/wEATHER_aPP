@@ -84,3 +84,103 @@
 </ul>
 </div>
 <h4>For More Info Visit <a href="/package.json">/package.json</a></h4>
+
+<div align="left">
+  <h2>The Code Explanation</h2>
+
+<h4><a href="/vite.config.js">vite.config.js</a></h4>
+<pre>
+  <code>
+    import { defineConfig } from 'vite'
+    import react from '@vitejs/plugin-react'
+
+    // https://vitejs.dev/config/
+    export default defineConfig({
+        plugins: [react()],
+        server: {
+          port: 3000
+        }
+    })
+  </code>
+</pre>
+
+
+<ol>
+  <li>
+    The import statements import the necessary functions and plugins from Vite and other dependencies. In this case, defineConfig is imported from vite, and the react plugin is imported from @vitejs/plugin-react.
+  </li>
+  <li>
+    The defineConfig function is called to define the configuration for Vite. It takes an object as an argument, where you can specify various options.
+  </li>
+  <li>
+    The plugins option is an array of plugins to be used with Vite. In this example, the react() plugin is included. You can add more plugins to enhance the functionality of Vite.
+  </li>
+  <li>
+    The server option allows you to configure the development server. In this case, the port property is set to 3000, specifying that the server should listen on port 3000. You can customize other server-related options as well.
+  </li>
+</ol>
+
+<h4><a href="/tailwind.config.js">tailwind.config.js</a></h4>
+
+<pre><code>
+export default {
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+</code></pre>
+
+
+
+<ul>
+  <li><strong>content:</strong> This option specifies the paths of the files that Tailwind CSS should analyze to generate the styles. In this case, it's set to <code>./src/**/*.{html,js}</code>, which means Tailwind CSS will analyze all HTML and JavaScript files in the <code>src</code> directory and its subdirectories.</li>
+  <li><strong>theme:</strong> This option allows you to customize the default theme of Tailwind CSS. In the provided configuration, the theme object is empty, indicating that no customizations have been made. You can extend this object to override or add new styles to the default theme.</li>
+  <li><strong>plugins:</strong> This option allows you to include additional Tailwind CSS plugins. In the provided configuration, the plugins array is empty, indicating that no additional plugins are being used. You can add custom plugins to this array to extend the functionality of Tailwind CSS.</li>
+</ul>
+
+
+
+<h3>Icons are stored in Icon Folder</h3>
+<h4><a href="/public/icons">icons</a></h4>
+
+<h2><b><a href="/src">src</a> Folder</b></h2>
+
+<ul>
+  <li>root
+    <ul>
+      <li>src</li>
+        <ul>
+          <li><a href="/src/components">components</a></li>
+          <ul>
+            <li>current</li>
+            <li>footer</li>
+            <li>forecast</li>
+            <li>header</li>
+            <li>search</li>
+          </ul>
+          <li><a href="/src/utils">utils</a></li>
+          <ul>
+            <li>TimeMaker.js</li>
+            <li>sunPoints.js</li>
+          </ul>
+          <li>api.jsx</li>
+          <li>App.jsx</li>
+          <li>App.css</li>
+          <li>index.css</li>
+          <li>main.jsx</li>
+          </ul>
+      
+</ul>
+<p> Inside the <code>components</code> folder, each component have their own file and style </p> 
+
+</div>
+
+
+
+
+
+
+
+
