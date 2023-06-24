@@ -177,10 +177,48 @@ export default {
 
 </div>
 
+<div align="left">
+<h3><a href="/src/api.jsx">api.jsx</a></h3>
+<pre>
+<code>
+
+export const url = 'https://wft-geo-db.p.rapidapi.com/v1/geo/cities';
+export const geoApiOptions = {
+	method: 'GET',
+	headers: {
+		'content-type': 'application/octet-stream',
+		'X-RapidAPI-Key': '1c92f1a8b1msh2c2895873151217p18a6dbjsna19dab27e7bb',
+		'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com'
+	}
+};
 
 
+export const currentWeatherAPI = "https://api.openweathermap.org/data/2.5";
 
+export const WEATHER_API_KEY = "b78eb28673235e92fd98f2b4ee473dcd";
 
+</code>
+</pre>
 
+<div>
+  <p>
+    <strong>Code Explanation:</strong>
+  </p>
+  <ul>
+    <li>
+      <code>url</code>: The constant <code>url</code> stores the endpoint for the Geo DB API to fetch cities data.
+    </li>
+    <li>
+      <code>geoApiOptions</code>: The constant <code>geoApiOptions</code> stores an object with the options for making a GET request to the Geo DB API. It includes the HTTP method, content type, and API key headers.
+    </li>
+    <li>
+      <code>currentWeatherAPI</code>: The constant <code>currentWeatherAPI</code> stores the base URL for the OpenWeatherMap API to retrieve current weather data.
+    </li>
+    <li>
+      <code>WEATHER_API_KEY</code>: The constant <code>WEATHER_API_KEY</code> stores the API key for accessing the OpenWeatherMap API.
+    </li>
+  </ul>
+</div>
+</div>
 
 
