@@ -178,7 +178,9 @@ export default {
 </div>
 
 <div align="left">
+
 <h3><a href="/src/api.jsx">api.jsx</a></h3>
+
 <pre>
 <code>
 
@@ -218,7 +220,6 @@ export const WEATHER_API_KEY = "b78eb28673235e92fd98f2b4ee473dcd";
       <code>WEATHER_API_KEY</code>: The constant <code>WEATHER_API_KEY</code> stores the API key for accessing the OpenWeatherMap API.
     </li>
   </ul>
-</div>
 </div>
 
 
