@@ -36,17 +36,17 @@ The Weather App offers the following key features:
 To set up and run the Weather App locally, follow these steps:
 
 #### 1\. Clone the repository:
-
+```console
     git clone https://github.com/Kushalmydesk/wEATHER_aPP.git
-
+```
 #### 2\. Navigate to the project directory:
-
+```console
     cd weather-app
-
+```
 #### 3\. Install the dependencies:
-
+```console
     npm install
-
+```
 ## Tech Stacks
 
 **Dependencies:**
