@@ -123,7 +123,7 @@ export default {
 
 - root
 
-  - src
+ - src
 
   - [components](/src/components)
 
