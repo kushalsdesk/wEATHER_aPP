@@ -121,9 +121,7 @@ export default {
 
 ## **[src](/src) Folder**
 
-- root
-
- - src
+- src
 
   - [components](/src/components)
 
